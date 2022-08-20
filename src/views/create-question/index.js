@@ -61,7 +61,7 @@ export default function CreateQuestion() {
             option2: Yup.string().required('Question number is required!'),
             correctAnswer: Yup.string().required('Select correct answer!')
         }),
-        onSubmit: () => {
+        onSubmit: (values, {resetForm}) => {
             console.log(formik.values);
             // this.postQuestion();
             const Question = {
@@ -90,10 +90,11 @@ export default function CreateQuestion() {
                     }
                 ]
             };
-            console.log(Question);
+//             console.log(Question);
             axios.post('https://reactndm.herokuapp.com/questions', Question).then((response) => {
                 console.log(response);
                 alert("Question added");
+                resetForm();
             });
         }
         // postQuestion: function () {
