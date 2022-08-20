@@ -93,7 +93,7 @@ function Question() {
     useEffect(() => {
         async function fetchQuestion() {
             const res = await axios({
-                url: 'http://localhost:8000/questions',
+                url: 'https://reactndm.herokuapp.com/questions',
                 method: 'GET'
             });
             setQuestion(res.data);
