@@ -91,7 +91,7 @@ export default function CreateQuestion() {
                 ]
             };
             console.log(Question);
-            axios.post(' http://localhost:3000/questions', Question).then((response) => {
+            axios.post(' http://localhost:8000/questions', Question).then((response) => {
                 console.log(response);
             });
         }
