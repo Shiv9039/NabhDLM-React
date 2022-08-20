@@ -17,7 +17,7 @@ function Topic() {
     useEffect(() => {
         async function fetchTopics() {
             const res = await axios({
-                url: 'http://localhost:3000/topic',
+                url: 'https://reactndm.herokuapp.com/topic',
                 method: 'GET'
             });
             setTopicName(res.data);
