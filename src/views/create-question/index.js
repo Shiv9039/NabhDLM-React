@@ -93,7 +93,7 @@ export default function CreateQuestion() {
 //             console.log(Question);
             axios.post('https://reactndm.herokuapp.com/questions', Question).then((response) => {
                 console.log(response);
-                alert("Question added");
+                alert('Question added');
                 resetForm();
             });
         }
