@@ -36,7 +36,7 @@ const Subjects = () => {
     useEffect(() => {
         async function fetchSubjects() {
             const apiData = await axios({
-                url: 'http://localhost:3000/subjects',
+                url: 'https://reactndm.herokuapp.com/subjects',
                 method: 'GET'
             });
             // console.log('this is fetched api data', apiData.data);
