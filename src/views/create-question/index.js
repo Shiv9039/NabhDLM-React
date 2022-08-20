@@ -62,7 +62,7 @@ export default function CreateQuestion() {
             correctAnswer: Yup.string().required('Select correct answer!')
         }),
         onSubmit: (values, {resetForm}) => {
-            console.log(formik.values);
+//             console.log(formik.values);
             // this.postQuestion();
             const Question = {
                 _questionNum: formik.values.questionNum,
